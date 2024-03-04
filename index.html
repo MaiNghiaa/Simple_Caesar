@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Mã hóa Caesar</title>
+</head>
+
+<body>
+    <style>
+        body {
+            padding: 18px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            width: 130px;
+            height: 40px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        div.error {
+            background: rgb(182, 182, 167);
+            color: rgb(245, 11, 11);
+        }
+
+        header {
+            background-color: #f1f1f1;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18pt;
+            padding: 20px;
+        }
+
+        article {
+
+            float: center;
+            width: 21%;
+            padding: 20px;
+        }
+
+        .ketqua {
+            cursor: default;
+            outline: none;
+        }
+    </style>
+    <header>Mã hóa Caesar</header>
+    <article>
+        <p>
+            <label>Chuỗi chưa mã hóa:</label>
+            <br />
+            <textarea id="plainText" cols="30"></textarea>
+        </p>
+        <p>
+            <label>Chuỗi sau khi mã hóa: </label>
+            <br />
+            <textarea id="cipherText" cols="30" readonly class="ketqua"></textarea>
+        </p>
+        <p>
+            <label>Key K: </label>
+            <input title="Nhập một kí tự từ A-Z hoặc số từ 1-25" type="text" id="key" size="1">
+        </p>
+        <div id="errorMsg" class="error"></div>
+        <p>
+            <button type="button" onclick="btnEncrypt()">Encrypt</button>
+        </p>
+    </article>
+
+    <section id="resultBruteforce"></section>
+
+
+
+</body>
+<script src="./index.js"></script>
+
+</html>
